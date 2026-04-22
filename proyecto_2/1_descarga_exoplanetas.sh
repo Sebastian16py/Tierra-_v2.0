@@ -1,4 +1,4 @@
-\# Redactamos el Query
+# Redactamos el Query
 ADQL="SELECT pl_name,discoverymethod,disc_facility,pl_rade,pl_eqt,st_teff from ps WHERE disc_facility='La Silla Observatory'"
 
 # Reemplazamos los espacios '+' usando 'sed' para que la URL no se rompa
@@ -15,4 +15,6 @@ python3 2_crear_db.py
 
 echo 'Realizando el analisis para los exoplanetas...'
 
-#python3 3_analisis.py
+python3 3_analisis.py
+
+echo 'Proyecto Tierra 2.0 completado.'
