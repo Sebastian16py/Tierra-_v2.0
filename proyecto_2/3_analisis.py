@@ -4,7 +4,6 @@ import sqlite3
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # Conectar con la base de datos
 conn = sqlite3.connect('sistemas_planetarios.db')
 
@@ -24,7 +23,11 @@ print('Filtro de habitabilidad realizado')
 QUERY_3 = 'SELECT st_teff, pl_eqt FROM planetas'
 df_3 = pd.read_sql_query(QUERY_3,conn)
 conn.close()
+print('Exoplanetas que poseen todos los datos')
+print(len(df_3))
 
+print(df_2.describe())
+print(df_2[['Temperatura_equilibrio','Radio_promedio']].head())
 
 # Grafica 
 plt.style.use('dark_background')
